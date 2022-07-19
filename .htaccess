@@ -1,0 +1,20 @@
+
+
+ 
+RewriteEngine on
+
+#If you want to remove extension for single file
+
+#RewriteRule ^tutorial$ tutorial.php [L]
+
+#For remove all php file extension 
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#RewriteCond ^tutorial/([a-zA-Z0-9-/]+)$ tutorial.php?language=$1
+
+RewriteRule ^([^\.]+)$ $1.php. [NC,L]
+
+
