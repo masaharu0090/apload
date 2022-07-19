@@ -67,7 +67,7 @@ class Blog extends Dbc
             $stmt->bindValue(':id', $blogs['id'], PDO::PARAM_INT);
             $stmt->execute();
             $dbh->commit();
-            echo 'ブログを更新しました';
+            echo 'ブログを更新しました。';
         } catch (PDOException $e) {
             $dbh->rollBack();
             exit($e);
