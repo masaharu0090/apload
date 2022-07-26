@@ -59,7 +59,7 @@ $files = getAllFile();
     </form>
     <div>
 <?php foreach($files as $file): ?>
-  <a href="top.php">
+  <a href="imag_create.php">
   <img src="<?php echo "{$file['file_path']}";?>" alt="" border ="5
   " width="30%" height="30%">
   </a>

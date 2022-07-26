@@ -12,24 +12,7 @@ $save_filename = date('YmdHis') . $filename;
 $err_msgs = array();
 $save_path = $upload_dir. $save_filename;
 
-// キャプションを取得
-$caption = filter_input(INPUT_POST, 'caption',FILTER_SANITIZE_SPECIAL_CHARS);
 
-// キャプションのバリデーション
-// 未入力
-if(empty($caption)) {
-    array_push($err_msgs, 'キャプションを入力してください。');
-}
-// 140文字か
-if(strlen($caption) > 140) {
-    array_push($err_msgs, 'キャプションは140文字以内で入力してください。');
-}
-
-// ファイルのバリデーション
-// ファイルのサイズが１MB未満か
-if($filesize > 1048576 || $file_err == 2) {
-    array_push($err_msgs, 'ファイルサイズは1MB未満にしてください。');
-    }
 
 // 拡張は画像形式か
 $allow_ext = array('jpg', 'jpeg', 'png');

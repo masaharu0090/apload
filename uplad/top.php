@@ -43,13 +43,7 @@ $files = getAllFile();
     }
   </style>
   <body>
-        <div>
-<p>編集画面</p>
-<p>画像の差し替え</p>
-<p>コメント修正</p>
-<p>修正確認画面</p>
-<p>修正実行</p>
-    </div>
+
     <form enctype="multipart/form-data" action="./file_upload.php" method="POST">
       <div class="file-up">
         <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
